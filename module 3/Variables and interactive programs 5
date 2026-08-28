@@ -1,0 +1,10 @@
+t = float(input("Enter talents: "))
+p = float(input("Enter pounds: "))
+l = float(input("Enter lots: "))
+
+g = ((t * 20 * 32) + (p * 32) + l) * 13.3
+kg = int(g // 1000)
+gr = g % 1000
+
+print("The weight in modern units:")
+print(str(kg) + " kilograms and " + str(round(gr, 2)) + " grams")

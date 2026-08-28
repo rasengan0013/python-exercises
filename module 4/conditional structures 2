@@ -1,0 +1,11 @@
+cab = str(input("What is your cabin class of a cruise ship? (LUX, A, B, C): "))
+if cab == 'LUX' or cab == 'lux':
+    print('LUX: upper-deck cabin with a balcony.')
+elif cab == 'A' or cab == 'a':
+    print('A: above the car deck, equipped with a window.')
+elif cab == 'B' or cab == 'b':
+    print('B: windowless cabin above the car deck.')
+elif cab == 'C' or cab == 'c':
+    print('C: windowless cabin below the car deck.')
+else:
+    print('Invalid cabin class')

@@ -1,0 +1,18 @@
+gen = str(input("What is your biological gender? (Male/Female): "))
+hem = float(input("What is your hemoglobin value (g/l)?:  "))
+if gen == 'Male' or gen == 'male':
+    if hem < 134:
+        print("Your hemoglobin value is low.")
+    elif hem > 167:
+        print("Your hemoglobin value is high.")
+    else:
+        print("Your hemoglobin value is normal.")
+elif gen == 'Female' or gen == 'female':
+    if hem < 117:
+        print("Your hemoglobin value is low.")
+    elif hem > 155:
+        print("Your hemoglobin value is high.")
+    else:
+        print("Your hemoglobin value is normal.")
+else:
+    print("Invalid gender.")
