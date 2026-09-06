@@ -1,0 +1,19 @@
+num = []
+
+while True:
+    user_input = input("Enter a number (press Enter to stop): ")
+    
+    if user_input == "":
+        break
+    
+    num.append(float(user_input))
+
+if num:
+    num.sort(reverse=True)
+    five_greatest = num[:5]
+    
+    print("The five greatest numbers in descending order:")
+    for number in five_greatest:
+        print(number)
+else:
+    print("No numbers were entered.")

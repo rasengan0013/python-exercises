@@ -1,0 +1,9 @@
+while True:
+    inch = float(input("Enter inches (negative number to quit): "))
+    
+    if inch < 0:
+        print("Program ended.")
+        break
+    
+    cm = inch * 2.54
+    print(f"{inch} inches = {cm:.2f} centimeters\n")

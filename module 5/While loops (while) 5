@@ -1,0 +1,17 @@
+counter = 0
+login = "admin"
+password = "1234"
+
+login_att = input("Enter your login: ")
+password_att = input("Enter your password: ")
+
+while login_att != login or password_att != password:
+    print("Incorrect login or password. Please try again.")
+    login_att = input("Enter your login: ")
+    password_att = input("Enter your password: ")
+    counter += 1
+    if counter >= 5:
+        print("Access denied.")
+        break
+    else:
+        print("Welcome.")

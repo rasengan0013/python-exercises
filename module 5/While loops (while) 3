@@ -1,0 +1,16 @@
+num = []
+
+while True:
+    user_input = input("Enter a number (or press Enter to stop): ")
+    
+    if user_input == "":
+        break
+    
+    num.append(float(user_input))
+
+if num:
+    smallest = min(num)
+    largest = max(num)
+    
+    print(f"\nSmallest number: {smallest}")
+    print(f"Biggest number: {largest}")

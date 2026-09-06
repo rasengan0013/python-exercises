@@ -1,0 +1,9 @@
+cities = []
+
+for i in range(5):
+    city = input(f"Enter city name {i+1}: ")
+    cities.append(city)
+
+print("Cities in the order you have entered:")
+for c in cities:
+    print(c)

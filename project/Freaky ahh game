@@ -1,0 +1,52 @@
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+if age < 12:
+    print("You are a minor. Program shutting down...")
+else:
+    print(f"Welcome, {name}!")
+    print(f"You are {age} years old.\n")
+    
+while True:
+    print("\n" + "=" * 40)
+    print("MAIN MENU")
+    print("=" * 40)
+    print("1. play - Start the game")
+    print("2. score - Show your score")
+    print("3. help - Display help information")
+    print("4. settings - Open settings")
+    print("5. lopeta - Exit the program")
+    print("=" * 40)
+    
+    command = input("Enter command: ")
+    
+    if command == "play":
+        print("\n🎮 Game started! Have fun!")
+        print("(This is a fictional game command)")
+    
+    elif command == "score":
+        print("\n📊 Your current score: 1337 points")
+        print("(This is a fictional score)")
+    
+    elif command == "help":
+        print("\n📖 HELP INFORMATION")
+        print("Available commands:")
+        print("  play     - Start the game")
+        print("  score    - Show your score")
+        print("  help     - Show this help")
+        print("  settings - Open settings")
+        print("  lopeta   - Exit the program")
+    
+    elif command == "settings":
+        print("\n⚙️ SETTINGS")
+        print("Sound: ON")
+        print("Music: ON")
+        print("Difficulty: MEDIUM")
+        print("(These are fictional settings)")
+    
+    elif command == "lopeta":
+        print("\n👋 Goodbye! Thanks for playing!")
+        break
+    
+    else:
+        print("\n❌ Unknown command! Please try again.")
