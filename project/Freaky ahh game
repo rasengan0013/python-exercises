@@ -1,52 +1,95 @@
+import sys
+
+def play_game():
+    print("\n🎮 Game started! Have fun!")
+    print("(This is a fictional game command)")
+
+def show_score():
+    print("\n📊 Your current score: 1337 points")
+    print("(This is a fictional score)")
+
+def add_inventory_item(inventory):
+    item = input("\nEnter an item to add to inventory: ").strip()
+    if item:
+        inventory.append(item)
+        print(f"✨ '{item}' added to inventory!")
+    else:
+        print("❌ Item name cannot be empty.")
+
+def show_inventory(inventory):
+    print("\n🎒 YOUR INVENTORY")
+    if not inventory:
+        print("Your inventory is empty.")
+    else:
+        for index, item in enumerate(inventory, start=1):
+            print(f"  {index}. {item}")
+
+def open_settings():
+    print("\n⚙️ SETTINGS")
+    print("Sound: ON")
+    print("Music: ON")
+    print("Difficulty: MEDIUM")
+    print("(These are fictional settings)")
+
+def display_help():
+    print("\n📖 HELP INFORMATION")
+    print("Available commands:")
+    print("  play      - Start the game")
+    print("  score     - Show your score")
+    print("  add       - Add item to inventory")
+    print("  inventory - View inventory")
+    print("  help      - Show this help")
+    print("  settings  - Open settings")
+    print("  lopeta    - Exit the program")
+
+inventory = []
+
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
 
 if age < 12:
     print("You are a minor. Program shutting down...")
+    sys.exit()
 else:
     print(f"Welcome, {name}!")
     print(f"You are {age} years old.\n")
-    
+
 while True:
     print("\n" + "=" * 40)
     print("MAIN MENU")
     print("=" * 40)
-    print("1. play - Start the game")
-    print("2. score - Show your score")
-    print("3. help - Display help information")
-    print("4. settings - Open settings")
-    print("5. lopeta - Exit the program")
+    print("1. play      - Start the game")
+    print("2. score     - Show your score")
+    print("3. add       - Add item to inventory")
+    print("4. inventory - Show inventory")
+    print("5. help      - Display help information")
+    print("6. settings  - Open settings")
+    print("7. lopeta    - Exit the program")
     print("=" * 40)
     
-    command = input("Enter command: ")
+    command = input("Enter command: ").strip().lower()
     
     if command == "play":
-        print("\n🎮 Game started! Have fun!")
-        print("(This is a fictional game command)")
-    
+        play_game()
+        
     elif command == "score":
-        print("\n📊 Your current score: 1337 points")
-        print("(This is a fictional score)")
-    
+        show_score()
+        
+    elif command == "add":
+        add_inventory_item(inventory)
+        
+    elif command == "inventory":
+        show_inventory(inventory)
+        
     elif command == "help":
-        print("\n📖 HELP INFORMATION")
-        print("Available commands:")
-        print("  play     - Start the game")
-        print("  score    - Show your score")
-        print("  help     - Show this help")
-        print("  settings - Open settings")
-        print("  lopeta   - Exit the program")
-    
+        display_help()
+        
     elif command == "settings":
-        print("\n⚙️ SETTINGS")
-        print("Sound: ON")
-        print("Music: ON")
-        print("Difficulty: MEDIUM")
-        print("(These are fictional settings)")
-    
+        open_settings()
+        
     elif command == "lopeta":
         print("\n👋 Goodbye! Thanks for playing!")
         break
-    
+        
     else:
         print("\n❌ Unknown command! Please try again.")

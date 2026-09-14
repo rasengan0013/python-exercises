@@ -1,5 +1,8 @@
-сумма = 0
-for число in [1, 2, 3, 4, 5]:
-    сумма = сумма + число
-    print(f"Сейчас сумма: {сумма}")
-print(f"Общая сумма: {сумма}")
+import random
+
+def cast():
+    first, second = random.randint(1,6), random.randint(1,6)
+    return first, second
+
+die1, die2 = cast()
+print(f"The dice show {die1} and {die2}.")
