@@ -1,0 +1,11 @@
+def sum_of_list(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+test_list = [4, 8, 15, 16, 23, 42]
+result = sum_of_list(test_list)
+
+print(f"List: {test_list}")
+print(f"Sum of elements: {result}")

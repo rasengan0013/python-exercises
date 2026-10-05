@@ -1,0 +1,27 @@
+import math
+
+def calculate_unit_price(diameter_cm, price_eur):
+    radius_m = (diameter_cm / 100) / 2
+    area_sq_meters = math.pi * (radius_m ** 2)
+    return price_eur / area_sq_meters
+
+print("--- Pizza 1 ---")
+d1 = float(input("Enter diameter in cm: "))
+p1 = float(input("Enter price in euros: "))
+
+print("\n--- Pizza 2 ---")
+d2 = float(input("Enter diameter in cm: "))
+p2 = float(input("Enter price in euros: "))
+
+unit_price1 = calculate_unit_price(d1, p1)
+unit_price2 = calculate_unit_price(d2, p2)
+
+print(f"\nPizza 1 unit price: {unit_price1:.2f} €/m²")
+print(f"Pizza 2 unit price: {unit_price2:.2f} €/m²")
+
+if unit_price1 < unit_price2:
+    print("Pizza 1 offers better value for money.")
+elif unit_price2 < unit_price1:
+    print("Pizza 2 offers better value for money.")
+else:
+    print("Both pizzas offer the exact same value for money.")

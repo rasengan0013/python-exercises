@@ -1,0 +1,20 @@
+class Elevator:
+    def __init__(self, bottom, top):
+        self.bottom, self.top, self.floor = bottom, top, bottom
+
+    def go_to_floor(self, target):
+        while self.floor != target:
+            self.floor += 1 if target > self.floor else -1
+            print(f"Elevator at floor {self.floor}")
+
+class Building:
+    def __init__(self, bottom, top, count):
+        self.bottom = bottom
+        self.elevators = [Elevator(bottom, top) for _ in range(count)]
+
+    def run_elevator(self, idx, floor):
+        self.elevators[idx].go_to_floor(floor)
+
+    def fire_alarm(self):
+        for e in self.elevators:
+            e.go_to_floor(self.bottom)

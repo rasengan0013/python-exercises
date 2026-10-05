@@ -1,0 +1,11 @@
+def gallons_to_liters(gallons):
+    return gallons * 3.78541
+
+while True:
+    user_input = float(input("Enter gasoline volume in gallons (negative value to quit): "))
+    if user_input < 0:
+        print("Execution ended.")
+        break
+    
+    liters = gallons_to_liters(user_input)
+    print(f"{user_input} gallons is {liters:.2f} liters.\n")

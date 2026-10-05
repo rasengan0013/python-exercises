@@ -1,0 +1,37 @@
+class Car:
+    def __init__(self, registration_number, max_speed):
+        self.registration_number = registration_number
+        self.max_speed = max_speed
+        self.current_speed = 0
+        self.travelled_distance = 0
+
+    def accelerate(self, speed_change):
+        self.current_speed = max(0, min(self.max_speed, self.current_speed + speed_change))
+
+    def drive(self, hours):
+        self.travelled_distance += self.current_speed * hours
+
+
+class ElectricCar(Car):
+    def __init__(self, registration_number, max_speed, battery_capacity_kwh):
+        super().__init__(registration_number, max_speed)
+        self.battery_capacity_kwh = battery_capacity_kwh
+
+
+class GasolineCar(Car):
+    def __init__(self, registration_number, max_speed, tank_volume_l):
+        super().__init__(registration_number, max_speed)
+        self.tank_volume_l = tank_volume_l
+
+
+electric_car = ElectricCar("ABC-15", 180, 52.5)
+gasoline_car = GasolineCar("ACD-123", 165, 32.3)
+
+electric_car.accelerate(120)
+gasoline_car.accelerate(140)
+
+electric_car.drive(3)
+gasoline_car.drive(3)
+
+print(f"Electric car ({electric_car.registration_number}) distance: {electric_car.travelled_distance:.1f} km")
+print(f"Gasoline car ({gasoline_car.registration_number}) distance: {gasoline_car.travelled_distance:.1f} km")

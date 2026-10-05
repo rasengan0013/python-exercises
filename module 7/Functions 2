@@ -1,0 +1,11 @@
+import random
+
+def roll_custom_dice(sides):
+    return random.randint(1, sides)
+
+sides = int(input("Enter the number of sides on the dice: "))
+
+roll = 0
+while roll != sides:
+    roll = roll_custom_dice(sides)
+    print(f"Rolled: {roll}")
