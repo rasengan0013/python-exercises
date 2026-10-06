@@ -1,0 +1,9 @@
+==================================================
+                  INSTRUCTIONS
+==================================================
+- Use 'move' (3) to travel between rooms.
+- Use 'collect' (4) to pick up items found in rooms.
+- Use 'inventory' (6) to check what items you carry.
+- Use 'save' (8) to save your current progress to a file.
+- Use 'load' (9) to restore your saved game state.
+- Use 'lopeta' (11) to close the game.
