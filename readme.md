@@ -1,6 +1,6 @@
 # Software 1 - Python exercises
 
-*Ivan Pugachev*
+## **Ivan Pugachev**
 
 ## 📄 Modules
 
