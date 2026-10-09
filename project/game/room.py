@@ -1,7 +1,5 @@
 class Room:
-    def __init__(self, name: str, item=None):
+    """Room: a name and an item inside (or None)."""
+    def __init__(self, name, item=None):
         self.name = name
         self.item = item
-
-    def __str__(self):
-        return self.name

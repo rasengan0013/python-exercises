@@ -1,9 +1,12 @@
 ==================================================
                   INSTRUCTIONS
 ==================================================
-- Use 'move' (3) to travel between rooms.
-- Use 'collect' (4) to pick up items found in rooms.
-- Use 'inventory' (6) to check what items you carry.
-- Use 'save' (8) to save your current progress to a file.
-- Use 'load' (9) to restore your saved game state.
-- Use 'lopeta' (11) to close the game.
+- 'move' (2)      - travel between rooms
+- 'collect' (3)   - pick up the item in the room
+- 'location' (4)  - look around
+- 'inventory' (5) - show your items
+- 'interact' (6)  - face the Guardian (only in Sanctuary)
+- 'help' (7)      - show these instructions
+- 'save' (8)      - save the game
+- 'load' (9)      - load the saved game
+- 'lopeta' (10)   - exit

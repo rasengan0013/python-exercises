@@ -1,20 +1,20 @@
 class Player:
-    def __init__(self, name: str, location):
+    """Player: name, current room, health and items."""
+    def __init__(self, name, location):
         self.name = name
         self.location = location
+        self.hp = 100
         self.items = []
 
-    def move(self, destination):
-        """Moves the player to a new room."""
-        self.location = destination
-        print(f"🚶 You moved to {self.location.name}.")
+    def move(self, room):
+        self.location = room
+        print(f"You moved to {room.name}.")
 
     def collect_item(self):
-        """Collects an item from the current room."""
-        if self.location.item:
-            picked_item = self.location.item
-            self.items.append(picked_item)
-            self.location.item = None
-            print(f"✨ You collected '{picked_item.name}' ({picked_item.weight} kg)!")
-        else:
-            print("❌ There is no item to collect in this room.")
+        item = self.location.item
+        if item is None:
+            print("No item in this room.")
+            return
+        self.items.append(item)       # add to inventory
+        self.location.item = None     # remove from the room
+        print(f"You collected {item.name}!")
