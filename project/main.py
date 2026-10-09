@@ -153,12 +153,31 @@ def main():
 
     print("=== THE FORGOTTEN CITADEL ===")
     name = input("Enter your name: ").strip() or "Arthur"
+
+    # age check: must be a number and at least 12
+    age = input("Enter your age: ").strip()
+    if not age.isdigit():
+        print("Invalid age. Shutting down...")
+        return
+    if int(age) < 12:
+        print("You are too young to play. Shutting down...")
+        return
+    print(f"Welcome, {name}! You are {age} years old.")
+
     player = Player(name, rooms[0])
 
     while True:
         print(f"\n[{player.location.name} | HP: {player.hp}]")
-        print("1 play  2 move  3 collect  4 location  5 inventory")
-        print("6 interact  7 help  8 save  9 load  10 lopeta")
+        print("1. play")
+        print("2. move")
+        print("3. collect")
+        print("4. location")
+        print("5. inventory")
+        print("6. interact")
+        print("7. help")
+        print("8. save")
+        print("9. load")
+        print("10. lopeta")
         command = input("Command: ").strip().lower()
 
         if command in ("play", "1"):
